@@ -1,0 +1,182 @@
+
+/* 1. Color palette */
+:root {
+    --primary: #176b67;
+    --dark: #104e4b;
+    --background: #f2f7f6;
+    --white: #ffffff;
+    --accent: #d5f0e8;
+    --text: #243b3a;
+    --border: #d6e3e0;
+}
+
+/* 2. Page design and body font */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "DM Sans", sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* 3. Headings font */
+h1, h2, h3 {
+    font-family: "Poppins", sans-serif;
+}
+
+h2 {
+    color: var(--primary);
+}
+
+/* 4. Header card */
+.main-header {
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 30px 20px;
+    text-align: center;
+    color: white;
+    background-color: var(--primary);
+    border-radius: 15px;
+}
+
+.main-header h1 {
+    color: white;
+}
+
+/* 5. Main layout */
+main {
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 0 20px;
+}
+
+/* 6. Separate sections into cards */
+.add-expense-section,
+.expenses-section,
+.help-section,
+.video-section {
+    margin-bottom: 25px;
+    padding: 25px;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* 7. Form styling */
+#expense-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#expense-form label {
+    font-weight: 600;
+}
+
+#expense-form input,
+#expense-form select {
+    width: 100%;
+    padding: 12px;
+    font: inherit;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background-color: white;
+}
+
+#expense-form input:focus,
+#expense-form select:focus {
+    outline: 2px solid var(--primary);
+}
+
+/* 8. Button styling */
+button {
+    padding: 12px 20px;
+    margin-top: 10px;
+    font: 600 16px "DM Sans", sans-serif;
+    color: white;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--dark);
+}
+
+/* 9. Expense table */
+.expenses-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.expenses-section th,
+.expenses-section td {
+    padding: 14px;
+    text-align: left;
+    border: 1px solid var(--border);
+}
+
+.expenses-section thead {
+    color: white;
+    background-color: var(--primary);
+}
+
+.expenses-section tbody tr:nth-child(even) {
+    background-color: #f0f8f6;
+}
+
+.expenses-section tbody tr:hover {
+    background-color: var(--accent);
+}
+
+/* 10. Help section */
+.help-section summary {
+    color: var(--primary);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 11. Video */
+.video-section iframe {
+    display: block;
+    max-width: 100%;
+    margin: 15px auto;
+    border-radius: 8px;
+}
+
+/* 12. Footer */
+footer {
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: var(--dark);
+}
+
+/* 13. Mobile layout */
+@media (max-width: 600px) {
+    main {
+        padding: 0 10px;
+    }
+
+    .add-expense-section,
+    .expenses-section,
+    .help-section,
+    .video-section {
+        padding: 15px;
+    }
+
+    .expenses-section th,
+    .expenses-section td {
+        padding: 8px;
+        font-size: 13px;
+    }
+}
